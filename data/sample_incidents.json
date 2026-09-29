@@ -1,0 +1,52 @@
+[
+  {
+    "incident_id": "INC-001",
+    "machine": "Capping Machine C-07",
+    "product": "1L Bottle",
+    "batch": "B301",
+    "quality_defect": "Bottle cap leakage",
+    "defect_rate_before_percent": 4.8,
+    "machine_condition": "Unstable capping torque",
+    "actions": [
+      {"action": "Torque calibration", "result": "FAILED"},
+      {"action": "Chuck replacement", "result": "SUCCESS"}
+    ],
+    "confirmed_root_cause": "Worn capping chuck",
+    "defect_rate_after_percent": 0.2,
+    "outcome": "SUCCESS",
+    "verification_status": "VERIFIED",
+    "test_purpose": "Verified experience containing both a failed action and a successful fix."
+  },
+  {
+    "incident_id": "INC-002",
+    "machine": "Capping Machine C-07",
+    "product": "1L Bottle",
+    "batch": "B302",
+    "defect_rate_before_percent": 3.9,
+    "quality_defect": "Bottle cap leakage",
+    "machine_condition": "Unstable capping torque",
+    "actions": [],
+    "confirmed_root_cause": null,
+    "outcome": "INVESTIGATION_OPEN",
+    "verification_status": "UNVERIFIED",
+    "recall_query": "Bottle leakage on C-07 with unstable capping torque. What previous troubleshooting actions and root causes are relevant?",
+    "test_purpose": "Recall INC-001 as evidence; inspect the chuck without assuming that its cause applies to this incident."
+  },
+  {
+    "incident_id": "INC-003",
+    "machine": "Capping Machine C-07",
+    "product": "1L Bottle",
+    "batch": "B303",
+    "quality_defect": "Bottle cap leakage",
+    "machine_condition": "Stable capping torque",
+    "recent_change": "New cap supplier introduced",
+    "actions": [
+      {"action": "Inspect cap dimensions against specification", "result": "Cap dimensional variation confirmed"},
+      {"action": "Replace affected caps with dimensionally compliant supplier material", "result": "SUCCESS"}
+    ],
+    "confirmed_root_cause": "Cap dimensional variation from supplier material",
+    "outcome": "SUCCESS",
+    "verification_status": "VERIFIED",
+    "test_purpose": "The same leakage defect can have a different cause; compare torque stability and supplier changes."
+  }
+]
